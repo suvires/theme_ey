@@ -1,0 +1,14 @@
+{{#summary}}                           
+    <div class="page-header-description-chevron">
+        <i class="fas fa-chevron-down rotate"></i>
+    </div>
+    <div class="page-header-description hidden">    
+        {{{summary}}}
+    </div>
+    {{#js}}
+    jQuery('.page-header-description-chevron i').click(function() {
+        jQuery('.page-header-description').slideToggle();
+        jQuery('.page-header-description-chevron i').toggleClass('rotate-180');
+    });
+    {{/js}}
+{{/summary}}

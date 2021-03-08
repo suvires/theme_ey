@@ -1,0 +1,32 @@
+{{< core_course/coursecards }}
+    {{$menu}}
+        {{> block_myoverview/course-action-menu }}
+    {{/menu}}
+    {{$progress}}
+        {{#hasprogress}}
+            <div class="hidden">
+                {{> block_myoverview/progress-bar}}
+            </div>
+        {{/hasprogress}}
+    {{/progress}}
+    {{$coursename}}
+        <span class="multiline">
+            {{#shortentext}}50, {{{fullname}}} {{/shortentext}}
+        </span>
+    {{/coursename}}
+    {{$coursecategory}}
+        {{#showcoursecategory}}
+            <span class="sr-only">
+                {{#str}}aria:coursecategory, core_course{{/str}}
+            </span>
+            <span class="categoryname">
+                {{{coursecategory}}}
+            </span>
+        {{/showcoursecategory}}
+    {{/coursecategory}}
+    {{$divider}}
+        {{#showcoursecategory}}
+            <div class="pl-1 pr-1">|</div>
+        {{/showcoursecategory}}
+    {{/divider}}
+{{/ core_course/coursecards }}

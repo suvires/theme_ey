@@ -1,0 +1,294 @@
+.btn:focus, a:focus, button {
+    box-shadow: none!important;
+    outline: none!important;
+}
+
+a:focus {
+    background-color: transparent!important;
+    color: $link-color!important;
+}
+
+input[type="text"], input[type="password"], textarea {
+    box-shadow: none!important;
+    outline: none!important;
+    border:1px solid $gray-400 !important;
+}
+
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:hover, 
+.login-form input:-webkit-autofill:focus, 
+.login-form input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px #FFF inset !important;
+}
+
+.shadow-md {
+    box-shadow: $shadow-md;
+}
+
+.rotate {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.rotate-180 {
+    transform: rotate(-180deg);
+}
+
+/* Login */
+
+.pagelayout-login .logo {
+    max-width: 90px;
+}
+
+.login-card {
+    width: 400px;
+}
+
+.login-form input:not(:placeholder-shown) ~ .floating-label {
+    color: $gray-600;
+}
+
+.login-form input:focus~.floating-label {
+    color: $primary;
+}
+
+.login-form input:focus {
+    border: 2px solid $primary !important;
+}
+
+.login-form input:focus~.floating-label, 
+.login-form input:not(:placeholder-shown) ~ .floating-label {
+    top: -9px;
+    left: 8px;
+    font-size: .8rem;
+    background-color: #FFF;
+    padding: 0 4px;
+}
+
+.login-form .floating-label {
+    position: absolute;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: $gray-600;
+    top: 14px;
+    left: 20px;
+}
+
+.forgetpass {
+    font-size: .9rem;
+}
+
+.forgetpass a:hover {
+    text-decoration: none;
+}
+
+/* Header */
+
+@media (min-width: 768px) {
+    .main-header {
+        transition: margin-left 0.5s ease,margin-right 0.5s ease;
+    }
+
+    body.drawer-open-left .main-header {
+        margin-left: 285px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.drawer-open-left {
+        overflow: auto;
+    }
+
+    body.drawer-open-left .main-header {
+        margin-left: 0;
+    }
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
+.navbar-icon {
+    font-size: 1.4rem;
+}
+
+header {
+    height: 60px;
+}
+
+header .logo {
+    height: 45px;
+}
+
+header .dropdown-toggle::after {
+    display: none;
+}
+
+header img.userpicture:hover {
+    border: 2px solid $gray-400;
+}
+
+header img.userpicture {
+    margin-right: 0;
+    border: 2px solid transparent;
+    box-sizing: content-box;
+}
+
+/* Nav drawer */
+
+#nav-drawer {
+    z-index: 1030!important;
+    padding: .5rem 0!important;
+    top:0!important;
+}
+
+@media (max-width: 767.98px) {
+    #nav-drawer {
+        top: 60px!important;
+        z-index: 1!important;
+    }
+}
+
+#nav-drawer ul {
+    margin: 0;
+}
+
+#nav-drawer ul li a {
+    color: $gray-900;
+    border-top-right-radius: 50rem!important;
+    border-bottom-right-radius: 50rem!important;
+}
+
+#nav-drawer ul li a:hover, #nav-drawer ul li a:focus {
+    color: $gray-900!important;
+    text-decoration: none!important;
+    background-color: $gray-100!important;
+}
+
+#nav-drawer ul li a.active {
+    background-color: $light-blue;
+}
+
+#nav-drawer ul li div {
+    color: $gray-500;
+}
+
+#nav-drawer i {
+    margin-right: 1.5rem;
+    font-size: 1.4rem;
+    font: normal normal normal 1.4rem FontAwesome;
+    color: $gray-700;
+}
+
+.fa-calendar:before {
+    content: "\f133"!important;
+}
+
+/* Page wrapper */
+
+#page-wrapper {
+    margin-top: 80px;
+    padding-bottom: 1rem;
+}
+
+/* My dashboard */
+
+#page-my-index {
+    background-color: #FFF;
+}
+
+/* My course overview */
+.course-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 767.98px) {
+    .course-grid {        
+        grid-template-columns: repeat(4, minmax(0, 1fr));        
+    }
+}
+
+.course-card:hover {
+    box-shadow: $shadow-md;
+}
+
+.course-card-img {
+    height: 7rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.course-card-body {
+    padding: 0.5rem;
+}
+
+.course-card-body h2 {
+    font-size: 1.2rem;
+}
+
+.course-card-body h3 {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.course-card-body h2 a:hover {
+    text-decoration: none;
+}
+
+/* Course */
+
+.full-header .front-course .course-header-image {
+    height: 12rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.full-header .front-course .page-header-headings {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #FFF;
+}
+
+.full-header .front-course .page-header-description-chevron {
+    position: absolute;
+    top: 9.4rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.full-header .front-course .page-header-description-chevron i {
+    padding: 0.7rem 0.5rem 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.full-header .front-course .page-header-description-chevron i:hover {
+    background-color: rgba(255,255,255,0.2)   
+}
+
+.full-header .front-course .page-header-description {
+    padding: 1rem;
+}
+
+.full-header .front-course .page-header-description p {
+    margin-bottom: 1rem;
+}
+
+.full-header .front-course .page-header-description p:last-of-type {
+    margin-bottom: 0;
+}
+
+.full-header .front-course .page-header-headings h2 {
+    font-size: 2.3rem;
+}
+
+.full-header .page-header-headings h3 {
+    font-size: 1.3rem;
+}

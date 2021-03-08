@@ -1,0 +1,29 @@
+<nav aria-label="{{firstcollectionlabel}}">
+    <ul class="list-unstyled">
+    {{# flatnavigation }}
+        {{#showdivider}}
+    </ul>
+</nav>
+<nav aria-label="{{get_collectionlabel}}">
+    <ul class="list-unstyled">
+        {{/showdivider}}
+        {{#action}}
+            <li>
+                <a class="d-flex align-items-center mr-1 p-3 {{#isactive}}active{{/isactive}} {{#classes}}{{.}} {{/classes}}" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+                    {{#icon.pix}}                                
+                            {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}                                
+                    {{/icon.pix}}
+                    <span class="text-truncate">{{{text}}}</span>
+                </a>
+            </li>
+        {{/action}}
+        {{^action}}
+            <li>
+                <div class="mt-3 font-weight-bold pl-2 pt-2 pb-1 border-top {{#classes}}{{.}} {{/classes}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>                                    
+                    <span class="text-truncate">{{{text}}}</span>
+                </div>
+            </li>
+        {{/action}}
+    {{/ flatnavigation }}
+    </ul>
+</nav>

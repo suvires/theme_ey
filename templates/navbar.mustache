@@ -1,0 +1,22 @@
+<header class="main-header d-flex p-2 justify-content-between align-items-center shadow-sm fixed-top bg-white">
+    
+        <div class="d-flex align-items-center">
+            <button class="bg-transparent border-0 mr-3" aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">
+                <i class="fas fa-bars menu-icon"></i>
+            </button>
+            <a href="{{{ config.wwwroot }}}">                
+                    <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}" class="logo">                                    
+            </a>
+            <!-- custom_menu -->
+            {{{ output.custom_menu }}}
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}            
+            <!-- search_box -->
+            {{{ output.search_box }}}                    
+        </div>
+
+        <div class="d-flex align-items-center">
+            {{{ output.navbar_plugin_output }}}
+            {{{ output.user_menu }}}
+        </div>
+</header>

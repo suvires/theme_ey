@@ -1,0 +1,40 @@
+<div class="course-card rounded border overflow-hidden" role="listitem"
+    data-region="course-content"
+    data-course-id="{{{id}}}">
+    <a href="{{viewurl}}" tabindex="-1">
+        <div class="card-img course-card-img" style='background-image: url("{{{courseimage}}}");'>
+            <span class="sr-only">{{#str}}aria:courseimage, core_course{{/str}}</span>
+        </div>
+    </a>
+    <div class="course-card-body" id="course-info-container-{{id}}-{{uniqid}}">        
+        <h2>
+            <a href="{{viewurl}}" class="aalink coursename mr-2">
+                {{> core_course/favouriteicon }}
+                <span class="sr-only">
+                        {{#str}}aria:coursename, core_course{{/str}}
+                    </span>
+                {{$coursename}}{{/coursename}}
+            </a>
+            {{^visible}}
+                <div class="d-flex flex-wrap">
+                    <span class="badge badge-info">{{#str}} hiddenfromstudents {{/str}}</span>
+                </div>
+            {{/visible}}
+        </h2>
+        <h3>
+            {{$coursecategory}}{{/coursecategory}}
+            {{#showshortname}}
+            {{$divider}}{{/divider}}
+            <span class="sr-only">
+                {{#str}}aria:courseshortname, core_course{{/str}}
+            </span>
+            <div>
+                {{{shortname}}}
+            </div>
+            {{/showshortname}}
+        
+        </h3>
+        {{$menu}}{{/menu}}        
+    </div>
+    {{$progress}}{{/progress}}
+</div>
